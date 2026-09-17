@@ -5,7 +5,7 @@
    UI is real data from your backend.
    =========================================================== */
 
-const API_BASE = "http://localhost:8000/api";
+const API_BASE = "https://fixcampus-rp4t.onrender.com/api";
 
 async function apiRequest(endpoint, method = "GET", body = null, isFormData = false) {
   const token = localStorage.getItem("token");
