@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Login — FixCampus</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <div class="brand-mark">🎓</div>
+      <div>
+        <div class="brand-name">Fix<span>Campus</span></div>
+        <div class="brand-sub">SMART CAMPUS PLATFORM</div>
+      </div>
+    </a>
+    <div></div>
+    <div class="nav-actions">
+      <a href="index.html" class="nav-login">← Back home</a>
+    </div>
+  </div>
+</nav>
+
+<div class="auth-wrap">
+  <div class="auth-card">
+    <h2>Welcome back</h2>
+    <p class="sub">Sign in to continue to your FixCampus dashboard.</p>
+
+    <div class="role-tabs">
+      <button type="button" class="role-tab active" data-role="student">Student</button>
+      <button type="button" class="role-tab" data-role="staff">Staff</button>
+      <button type="button" class="role-tab" data-role="admin">Admin</button>
+    </div>
+
+    <div class="form-msg" id="loginMsg"></div>
+
+    <form id="loginForm">
+      <div class="field">
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" placeholder="you@campus.edu" required />
+      </div>
+      <div class="field">
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" placeholder="••••••••" required />
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+    </form>
+
+    <p class="auth-switch">
+  Don't have an account? <a href="register.html">Create one</a>
+</p>
+
+<p class="auth-switch" style="margin-top:8px; font-size:0.78rem;">
+  Students and staff: <a href="register.html">register here</a> first.
+  Staff accounts require admin approval.
+</p>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script>initLoginPage();</script>
+</body>
+</html>

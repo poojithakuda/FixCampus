@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FixCampus — Smart Campus Resolution Platform</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container">
+    <div class="brand">
+      <div class="brand-mark">🎓</div>
+      <div>
+        <div class="brand-name">Fix<span>Campus</span></div>
+        <div class="brand-sub">SMART CAMPUS PLATFORM</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="nav-pill active">Home</a>
+    </div>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" title="Toggle theme">☀️</button>
+      <a href="login.html" class="nav-login">Login</a>
+      <a href="register.html" class="btn btn-primary">Get Started</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">⚡ Smart Campus Resolution Platform</div>
+      <h1>Report issues.<br /><span class="accent">Get them<br />resolved.</span></h1>
+      <p class="lead">FixCampus connects students, staff and administrators through one transparent complaint management platform.</p>
+      <div class="hero-actions">
+        <a href="register.html" class="btn btn-primary">Get Started →</a>
+        <a href="login.html" class="btn btn-outline">Create Account</a>
+      </div>
+      <div class="hero-checks">
+        <span>Easy reporting</span>
+        <span>Real-time tracking</span>
+        <span>Transparent workflow</span>
+      </div>
+    </div>
+
+    <div class="tracking-card">
+      <div class="tc-head">
+        <div>
+          <div class="tc-label">Complaint Status</div>
+          <div class="tc-title">Live Tracking</div>
+        </div>
+        <div class="tc-status">Active</div>
+      </div>
+
+      <div class="tc-step">
+        <div class="tc-icon purple">📄</div>
+        <div>
+          <strong>Complaint submitted</strong>
+          <small>Received by the platform</small>
+        </div>
+        <div class="tc-check">✓</div>
+      </div>
+
+      <div class="tc-step">
+        <div class="tc-icon purple">🔧</div>
+        <div>
+          <strong>Assigned to staff</strong>
+          <small>Routed to the right team</small>
+        </div>
+        <div class="tc-check">✓</div>
+      </div>
+
+      <div class="tc-step">
+        <div class="tc-icon green">✓</div>
+        <div>
+          <strong>Resolution</strong>
+          <small>Track every step</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Why FixCampus -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">WHY FIXCAMPUS?</span>
+      <h2>A better way to manage campus issues</h2>
+      <p>Designed around transparency, accountability and a simple user experience.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon" style="background:rgba(255,140,66,.15); color:var(--orange);">⚡</div>
+        <h3>Quick Resolution</h3>
+        <p>Streamlined workflows help route issues to the right people and reduce unnecessary delays.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:rgba(0,217,163,.15); color:var(--green);">🔒</div>
+        <h3>Transparent Process</h3>
+        <p>Follow complaints from submission through assignment, progress updates and resolution.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:rgba(108,92,231,.15); color:var(--purple-light);">📱</div>
+        <h3>Easy Access</h3>
+        <p>A responsive interface that works smoothly across desktops, tablets and mobile devices.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="stats-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">PLATFORM OVERVIEW</span>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card purple">
+        <div>✓</div>
+        <div class="stat-value" id="resolvedCount">—</div>
+        <div class="stat-label">Complaints Resolved</div>
+      </div>
+      <div class="stat-card green">
+        <div>👥</div>
+        <div class="stat-value" id="usersCount">—</div>
+        <div class="stat-label">Registered Users</div>
+      </div>
+      <div class="stat-card orange">
+        <div>⏱</div>
+        <div class="stat-value" id="avgResponse">—</div>
+        <div class="stat-label">Average Response Time</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section testimonials-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">COMMUNITY FEEDBACK</span>
+      <h2>What users say</h2>
+      <p>Feedback from people using the platform.</p>
+    </div>
+    <div class="testimonial-grid" id="testimonialsGrid">
+      <!-- filled by landing.js -->
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-badge">C</div>
+    <h2>Make your campus better, one complaint at a time.</h2>
+    <p>FixCampus makes it easier to report problems, communicate with support teams and follow resolutions.</p>
+    <a href="register.html" class="btn btn-primary">Create Your Account →</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand">
+          <div class="brand-mark">C</div>
+          <div class="brand-name">Fix<span>Campus</span></div>
+        </div>
+        <p>Smart campus complaint and resolution platform built to improve communication, accountability and campus experiences.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="#">Complaint Management</a></li>
+          <li><a href="#">Real-time Tracking</a></li>
+          <li><a href="#">Staff Assignment</a></li>
+          <li><a href="#">Admin Analytics</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Access</h4>
+        <ul>
+          <li><a href="login.html">Student Login</a></li>
+          <li><a href="login.html">Staff Login</a></li>
+          <li><a href="login.html">Administrator Login</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 FixCampus. All rights reserved.</span>
+      <span>Smart Campus Complaint & Resolution Platform</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/landing.js"></script>
+</body>
+</html>

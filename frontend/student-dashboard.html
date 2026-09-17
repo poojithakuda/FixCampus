@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Student Dashboard — FixCampus</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <div class="brand-mark">🎓</div>
+      <div>
+        <div class="brand-name">Fix<span>Campus</span></div>
+        <div class="brand-sub">SMART CAMPUS PLATFORM</div>
+      </div>
+    </a>
+    <div></div>
+    <div class="nav-actions">
+      <button class="btn btn-outline" id="logoutBtn">Log out</button>
+    </div>
+  </div>
+</nav>
+
+<div class="dash-shell">
+  <aside class="sidebar">
+    <div class="sidebar-user">
+      <div class="name" id="sidebarName">Student</div>
+      <div class="role" id="sidebarRole">student</div>
+    </div>
+    <a href="#" class="side-link active">📋 My Complaints</a>
+    <a href="#submitForm" class="side-link">➕ Submit New</a>
+    <a href="#" class="side-link logout" id="sidebarLogout">↩ Log out</a>
+  </aside>
+
+  <main class="dash-main">
+    <div class="dash-header">
+      <div>
+        <h1>My Complaints</h1>
+        <p>Report new issues and track their progress in real time.</p>
+      </div>
+    </div>
+
+    <div class="mini-stats">
+      <div class="mini-stat"><div class="num" id="statTotal">—</div><div class="lbl">Total submitted</div></div>
+      <div class="mini-stat"><div class="num" id="statOpen">—</div><div class="lbl">In progress</div></div>
+      <div class="mini-stat"><div class="num" id="statResolved">—</div><div class="lbl">Resolved</div></div>
+      <div class="mini-stat"><div class="num" id="statAvg">3h</div><div class="lbl">Avg. response time</div></div>
+    </div>
+
+    <div class="panel" id="submitForm">
+      <h3>Submit a new complaint</h3>
+      <div class="form-msg" id="submitMsg"></div>
+      <form id="complaintForm">
+        <div class="field">
+          <label for="cTitle">Title (optional)</label>
+          <input type="text" id="cTitle" placeholder="e.g. Projector not working" />
+        </div>
+        <div class="field">
+          <label for="cCategory">Category</label>
+          <select id="cCategory" required>
+            <option value="">Loading categories...</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="cLocation">Location</label>
+          <input type="text" id="cLocation" placeholder="e.g. Room 204, Main Building" required />
+        </div>
+        <div class="field">
+          <label for="cDescription">Description</label>
+          <textarea id="cDescription" rows="4" placeholder="Describe the issue in detail..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit complaint</button>
+      </form>
+    </div>
+
+    <div class="panel">
+      <h3>Complaint history</h3>
+      <div id="complaintsList"><p class="empty-state">Loading complaints...</p></div>
+    </div>
+  </main>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/student.js"></script>
+</body>
+</html>

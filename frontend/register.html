@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Create Account — FixCampus</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <div class="brand-mark">🎓</div>
+      <div>
+        <div class="brand-name">Fix<span>Campus</span></div>
+        <div class="brand-sub">SMART CAMPUS PLATFORM</div>
+      </div>
+    </a>
+    <div></div>
+    <div class="nav-actions">
+      <a href="index.html" class="nav-login">← Back home</a>
+    </div>
+  </div>
+</nav>
+
+<div class="auth-wrap">
+  <div class="auth-card">
+    <h2>Create your account</h2>
+    <p class="sub" id="registerSub">Register as a student to start reporting campus issues right away.</p>
+
+    <div class="role-tabs">
+      <button type="button" class="role-tab active" data-role="student">Student</button>
+      <button type="button" class="role-tab" data-role="staff">Staff</button>
+    </div>
+
+    <div class="form-msg" id="registerMsg"></div>
+
+    <form id="registerForm">
+      <div class="field">
+        <label for="regName">Full name</label>
+        <input type="text" id="regName" placeholder="Your name" required />
+      </div>
+      <div class="field">
+        <label for="regEmail">Email</label>
+        <input type="email" id="regEmail" placeholder="you@college.edu" required />
+      </div>
+      <div class="field" id="departmentField" style="display:none;">
+        <label for="regDepartment">Department</label>
+        <select id="regDepartment">
+          <option value="">Loading departments...</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="regPassword">Password</label>
+        <input type="password" id="regPassword" placeholder="At least 6 characters" minlength="6" required />
+      </div>
+      <div class="field">
+        <label for="regConfirm">Confirm password</label>
+        <input type="password" id="regConfirm" placeholder="Repeat password" minlength="6" required />
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Create account</button>
+    </form>
+
+    <p class="auth-switch">Already have an account? <a href="login.html">Sign in</a></p>
+    <p class="auth-switch" style="margin-top:8px; font-size:0.78rem;">
+      Admin accounts aren't self-registered — they're created directly by FixCampus administration.
+    </p>
+  </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script>initRegisterPage();</script>
+</body>
+</html>

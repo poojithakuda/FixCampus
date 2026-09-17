@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Staff Dashboard — FixCampus</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <div class="brand-mark">🎓</div>
+      <div>
+        <div class="brand-name">Fix<span>Campus</span></div>
+        <div class="brand-sub">SMART CAMPUS PLATFORM</div>
+      </div>
+    </a>
+    <div></div>
+    <div class="nav-actions">
+      <button class="btn btn-outline" id="logoutBtn">Log out</button>
+    </div>
+  </div>
+</nav>
+
+<div class="dash-shell">
+  <aside class="sidebar">
+    <div class="sidebar-user">
+      <div class="name" id="sidebarName">Staff</div>
+      <div class="role" id="sidebarRole">staff</div>
+    </div>
+    <a href="#" class="side-link active">🛠 Assigned Complaints</a>
+    <a href="#" class="side-link logout" id="sidebarLogout">↩ Log out</a>
+  </aside>
+
+  <main class="dash-main">
+    <div class="dash-header">
+      <div>
+        <h1>Assigned Complaints</h1>
+        <p>Update the status of complaints assigned to you as you work on them.</p>
+      </div>
+    </div>
+
+    <div class="mini-stats">
+      <div class="mini-stat"><div class="num" id="statAssigned">—</div><div class="lbl">In my department's queue</div></div>
+      <div class="mini-stat"><div class="num" id="statProgress">—</div><div class="lbl">In progress</div></div>
+      <div class="mini-stat"><div class="num" id="statDone">—</div><div class="lbl">Resolved / closed</div></div>
+      <div class="mini-stat"><div class="num" id="statAvg">—</div><div class="lbl">Avg. response time</div></div>
+    </div>
+
+    <div class="panel">
+      <h3>My department's queue</h3>
+      <div id="complaintsList"><p class="empty-state">Loading complaints...</p></div>
+    </div>
+  </main>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/staff.js"></script>
+</body>
+</html>

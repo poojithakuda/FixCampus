@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admin Dashboard — FixCampus</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <div class="brand-mark">🎓</div>
+      <div>
+        <div class="brand-name">Fix<span>Campus</span></div>
+        <div class="brand-sub">SMART CAMPUS PLATFORM</div>
+      </div>
+    </a>
+    <div></div>
+    <div class="nav-actions">
+      <button class="btn btn-outline" id="logoutBtn">Log out</button>
+    </div>
+  </div>
+</nav>
+
+<div class="dash-shell">
+  <aside class="sidebar">
+    <div class="sidebar-user">
+      <div class="name" id="sidebarName">Admin</div>
+      <div class="role" id="sidebarRole">admin</div>
+    </div>
+    <a href="#" class="side-link active">📊 All Complaints</a>
+    <a href="#" class="side-link logout" id="sidebarLogout">↩ Log out</a>
+  </aside>
+
+  <main class="dash-main">
+    <div class="dash-header">
+      <div>
+        <h1>Admin Overview</h1>
+        <p>Monitor every complaint on campus and assign staff to handle them.</p>
+      </div>
+    </div>
+
+    <div class="mini-stats">
+      <div class="mini-stat"><div class="num" id="statTotal">—</div><div class="lbl">Total complaints</div></div>
+      <div class="mini-stat"><div class="num" id="statUnassigned">—</div><div class="lbl">Unassigned</div></div>
+      <div class="mini-stat"><div class="num" id="statResolved">—</div><div class="lbl">Resolved</div></div>
+      <div class="mini-stat"><div class="num" id="statUsers">—</div><div class="lbl">Registered users</div></div>
+    </div>
+
+    <div class="panel">
+      <h3>Departments at a glance</h3>
+      <div class="mini-stats" id="departmentBreakdown"></div>
+    </div>
+
+    <div class="panel">
+      <h3>Pending staff approvals</h3>
+      <div id="pendingStaffList"><p class="empty-state">Loading...</p></div>
+    </div>
+
+    <div class="panel">
+      <h3>All complaints</h3>
+      <div id="complaintsList"><p class="empty-state">Loading complaints...</p></div>
+    </div>
+  </main>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
